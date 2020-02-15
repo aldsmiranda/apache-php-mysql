@@ -112,8 +112,8 @@ RUN chmod +x /run.sh
 COPY docker-php-* /usr/local/bin/
 COPY apache2-foreground /usr/local/bin/
 RUN rm -Rf /etc/apache2/sites-enabled/*.conf
-ADD ssl.conf /etc/apache2/sites-enabled/ssl.conf
-RUN chmod +x /usr/local/bin/apache2-foreground && a2enmod expires headers ssl mime_magic include
+#ADD ssl.conf /etc/apache2/sites-enabled/ssl.conf
+RUN chmod +x /usr/local/bin/apache2-foreground && a2enmod expires headers mime_magic include
 
 WORKDIR /var/www/html
 
