@@ -1,2 +1,0 @@
-FROM aldsmiranda/php:meuphp
-a2enmod expires
